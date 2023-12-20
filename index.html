@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./main.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Checkout</h1>
+	<div id="products">
+		<h2>Products</h2>
+		<div>
+			<p>
+				<a href="">Apple&#174; - iPad&#174; with Retina&#174; display Wi-Fi - 32GB - White</a>
+				<span>$499.00</span>
+			</p>
+			<p>
+				<a href="">16GB A Series Walkman Video MP3</a>
+				<span>$130.00</span>
+			</p>
+		</div>
+	</div>
+	<div id="shippingMethod">
+		<h2>Shipping Method</h2>
+		<p>
+			<span>FedEx</span>
+			<span>$13.99</span>
+		</p>
+	</div>
+	<div class="payment-method">
+		<div class="tabs">
+			<button class="tab active" data-tab="credit">Credit Card</button>
+			<button class="tab" data-tab="gift">Gift Card</button>
+			<button class="tab" data-tab="paypal">PayPal</button>
+		</div>
+		<div id="credit" class="tab-content active-tab">
+			<form id="paymentForm">
+				<div class="form-group">
+					<label for="cardNumber">Card number *</label>
+					<input type="text" id="cardNumber" required>
+				</div>
+				<div class="form-group half-width">
+					<label for="validThru">Valid thru (mm/yy) *</label>
+					<input type="text" id="validThru" required>
+				</div>
+				<div class="form-group half-width">
+					<label for="cvv">CVV/CVC *</label>
+					<div class="cvv-input">
+						<input type="text" id="cvv" required>
+						<i class="fa-solid fa-question-circle" id="cvvTooltipTrigger"></i>
+						<div class="tooltip" id="cvvTooltip">The CVV is the 3-digit number at the back of your card.</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="cardHolder">Cardholder's name *</label>
+					<input type="text" id="cardHolder" required>
+				</div>
+				<div class="form-group">
+					<input type="checkbox" id="terms" required>
+					<label for="terms" class="terms-link">I accept the <span>Terms and Conditions</span></label>
+				</div>
+				<div class="form-group">
+					<button type="submit">Place order ($624.99)</button>
+				</div>
+			</form>
+		</div>
+		<div id="gift" class="tab-content"></div>
+		<div id="paypal" class="tab-content"></div>
+	</div>
+
+	<div id="termsModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Terms and Conditions</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt aperiam quod expedita, cupiditate sint
+				labore tempore atque quam praesentium blanditiis quibusdam eos porro dolore tempora earum ipsum mollitia, sed
+				provident! Commodi dolorem eaque consequatur doloremque, ex labore velit in quaerat dicta tempora deserunt,
+				nobis temporibus, reiciendis ipsa ut vero quod libero hic. Nulla illo quod beatae culpa libero maiores
+				voluptatum voluptate laboriosam. Maiores nobis inventore eum in veniam itaque dignissimos nihil minus, nisi
+				accusantium iusto necessitatibus atque quasi ullam quisquam voluptatum, ad aperiam magnam? Quod voluptatibus
+				perspiciatis ipsum ipsam, maiores placeat, quaerat repudiandae dolore delectus quasi quibusdam nisi? Repellat,
+				ratione.</p>
+		</div>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
